@@ -1,7 +1,7 @@
 var json;
 
 function preload() {
-	json = loadJSON("twitdat2.json");
+	json = loadJSON("../twitdata.json");
 }
 
 function setup() {
@@ -15,12 +15,12 @@ function draw() {
   var time = frameCount;
   textFont('Menlo');
   fill(250);
-    for(var i = 0; i < json.info.length; i++) {
-        for(key in json.info[i]){  
-        text(json.info[i][key], ((1200*i)+80)-time, windowHeight/2);
+    for(var i = 0; i < json.mydata.length; i++) {
+        for(key in json.mydata[i]){  
+        text(json.mydata[i][key], ((1200*i)+80)-time, windowHeight/2);
         }
     }
     
-    console.log(json.info.length);
+    console.log(json.mydata.length);
    
 }
