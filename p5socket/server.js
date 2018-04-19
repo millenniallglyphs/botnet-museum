@@ -34,25 +34,26 @@ function finished(err) {
 
 var param = {
   q: 'botnet',
-  count: 20
+  count: 40
 }
 //twiiter pull
 T.get('search/tweets', param, thewords); 
  
 function thewords(err, data, response) {
+  var another;
   var alltweet = [];
-  var another= {};
   var twiit = {"mydata" : alltweet};
   var twitbot = data.statuses;
 
   for (var i = 0; i < twitbot.length; i++){
-    another.tweet = twitbot[i].text; 
+    another = {};
+    another.i = twitbot[i].text; 
     alltweet.push(another);
     
   //write to JSON to public folder
   fs.writeFile('twitdata.json', JSON.stringify(twiit), finished);
-    console.log("this is my json" + " " + twiit);
-    console.log(twitbot[i].text);
+    console.log(alltweet);
+    //console.log(another.tweet = twitbot[i].text);
   }
   
 }
