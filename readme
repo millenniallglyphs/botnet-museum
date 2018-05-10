@@ -1,1 +1,1 @@
-This is my in progress attempt at using the twitter API in a P5.js sketch. I use node to pull tweets from twitter using twit NPM. From there, I write the tweets to a JSON file. Right now, I'm running into issues opening the JSON file in P5.js. Right now I can console.log the tweets in my web browser, but I'm still unable to use the JSON file in my sketch.
+This is my in progress attempt at using the twitter API in a P5.js sketch. I use node to pull tweets from twitter using twit NPM. From there, I write the tweets to a JSON file. 
